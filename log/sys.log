@@ -1,0 +1,282 @@
+09/18/2024 08:40:36 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 08:40:36 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 08:40:40 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 20:40:40] "GET / HTTP/1.1" 200 -
+09/18/2024 08:40:48 PM - INFO    : Ket qua OCR: {'images.jpg': '5 1YN.'}
+09/18/2024 08:40:48 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 59, in upload_file
+    return render_template('result.html', ocr_results=ocr_results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\templates\result.html", line 33, in top-level template code
+    <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'filename'
+09/18/2024 08:40:48 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 20:40:48] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 08:44:27 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 08:44:27 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 08:44:29 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 20:44:29] "GET / HTTP/1.1" 200 -
+09/18/2024 08:44:36 PM - INFO    : Ket qua OCR: {'images.jpg': '5 1YN.'}
+09/18/2024 08:44:36 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 59, in upload_file
+    return render_template('result.html', ocr_results=ocr_results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\templates\result.html", line 33, in top-level template code
+    <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'filename'
+09/18/2024 08:44:36 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 20:44:36] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 08:46:41 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 08:46:41 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 08:46:43 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 20:46:43] "GET / HTTP/1.1" 200 -
+09/18/2024 08:46:51 PM - INFO    : Ket qua OCR: {'images.jpg': '5 1YN.'}
+09/18/2024 08:46:51 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 60, in upload_file
+    return render_template('result.html', ocr_results=ocr_results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\templates\result.html", line 33, in top-level template code
+    <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'filename'
+09/18/2024 08:46:51 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 20:46:51] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 09:06:36 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 09:06:36 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 09:06:38 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:06:38] "GET / HTTP/1.1" 200 -
+09/18/2024 09:06:47 PM - INFO    : Ket qua OCR: {'images.jpg': '5 1YN.'}
+09/18/2024 09:06:47 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 60, in upload_file
+    return render_template('result.html', ocr_results=ocr_results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\templates\result.html", line 33, in top-level template code
+    <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'filename'
+09/18/2024 09:06:47 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:06:47] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 09:09:41 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 09:09:41 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 09:09:43 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:09:43] "GET / HTTP/1.1" 200 -
+09/18/2024 09:09:49 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 60, in upload_file
+    return render_template('result.html', ocr_results=ocr_results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\templates\result.html", line 34, in top-level template code
+    <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'filename'
+09/18/2024 09:09:49 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:09:49] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 09:11:14 PM - INFO    : Ket qua OCR: {'images.jpg': '5 1YN.'}
+09/18/2024 09:11:14 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 60, in upload_file
+    return render_template('result.html', ocr_results=ocr_results)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\templates\result.html", line 34, in top-level template code
+    <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'filename'
+09/18/2024 09:11:14 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:11:14] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 09:14:37 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 09:14:37 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 09:14:42 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:14:42] "GET / HTTP/1.1" 200 -
+09/18/2024 09:14:49 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:14:49] "POST /upload HTTP/1.1" 200 -
+09/18/2024 09:14:49 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:14:49] "GET /static/uploads/images.jpg HTTP/1.1" 200 -
+09/18/2024 09:28:44 PM - ERROR   : Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\main.py", line 48, in upload_file
+    pixel_values = processor(images=image, return_tensors="pt").pixel_values
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\transformers\models\trocr\processing_trocr.py", line 85, in __call__
+    inputs = self.image_processor(images, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\transformers\image_processing_utils.py", line 41, in __call__
+    return self.preprocess(images, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\transformers\utils\generic.py", line 852, in wrapper
+    return func(*args, **valid_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\transformers\models\vit\image_processing_vit.py", line 247, in preprocess
+    input_data_format = infer_channel_dimension_format(images[0])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Code_F_Comp\2024\ojt_ex\app_ocr\.venv\Lib\site-packages\transformers\image_utils.py", line 243, in infer_channel_dimension_format
+    raise ValueError(f"Unsupported number of image dimensions: {image.ndim}")
+ValueError: Unsupported number of image dimensions: 2
+09/18/2024 09:28:44 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 21:28:44] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+09/18/2024 11:22:32 PM - INFO    : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.75:5000
+09/18/2024 11:22:32 PM - INFO    : [33mPress CTRL+C to quit[0m
+09/18/2024 11:22:36 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:22:36] "GET / HTTP/1.1" 200 -
+09/18/2024 11:23:04 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:23:04] "POST /upload HTTP/1.1" 200 -
+09/18/2024 11:23:04 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:23:04] "GET /static/uploads/images.jpg HTTP/1.1" 200 -
+09/18/2024 11:25:08 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:25:08] "POST /upload HTTP/1.1" 200 -
+09/18/2024 11:25:09 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:25:09] "GET /static/uploads/images.jpg HTTP/1.1" 200 -
+09/18/2024 11:25:12 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:25:12] "[31m[1mGET /upload HTTP/1.1[0m" 405 -
+09/18/2024 11:25:22 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:25:22] "GET / HTTP/1.1" 200 -
+09/18/2024 11:25:31 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:25:31] "POST /upload HTTP/1.1" 200 -
+09/18/2024 11:25:31 PM - INFO    : 127.0.0.1 - - [18/Sep/2024 23:25:31] "GET /static/uploads/images.jpg HTTP/1.1" 200 -

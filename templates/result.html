@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Results</title>
+    <style>
+        .result-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .result-item {
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 300px;
+            height: auto;
+        }
+        .ocr-text {
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            white-space: pre-wrap;  /* Đảm bảo text xuống dòng đúng */
+        }
+    </style>
+</head>
+<body>
+    <h1>OCR Results</h1>
+    <div class="result-container">
+        {% for result in ocr_results %}
+        <div class="result-item">
+            <h3>{{ result['filename'] }}</h3>
+            <!-- Sử dụng url_for để trỏ đến ảnh trong static/uploads -->
+            <img src="{{ url_for('static', filename='uploads/' + result['filename']) }}" alt="{{ result['filename'] }}">
+            <div class="ocr-text">{{ result['text'] }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
